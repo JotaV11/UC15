@@ -1,0 +1,160 @@
+/* Reset básico para garantir que todos os navegadores tenham uma aparência consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #3288d8;
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto; /* Remove a margem superior e inferior */
+    padding: 0; /* Remove o padding */
+    max-width: 300px; /* Define a largura máxima da imagem */
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 0.25rem 0; /* Ajusta o padding do header, se necessário */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0; /* Mantém uma margem mínima entre o menu e a logo */
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #f1f1f1;
+    margin-top: 20px;
+}
+.image-carousel {
+    max-width: 600px; /* Largura máxima do carrossel */
+    margin: 20px auto; /* Centraliza o carrossel na página */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.carousel {
+    position: relative; /* Permite posicionar elementos filhos */
+    overflow: hidden; /* Esconde partes dos slides que não estão visíveis */
+}
+
+.slides {
+    display: flex; /* Alinha os slides em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de slide */
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+}
+
+.slide img {
+    width: 100%; /* As imagens ocupam 100% da largura do slide */
+    border-radius: 10px; /* Bordas arredondadas para as imagens */
+}
+
+input[type="radio"] {
+    display: none; /* Esconde os botões de rádio */
+}
+
+/* Estilos para cada slide baseado no botão de rádio selecionado */
+#slide1:checked ~ .slides {
+    transform: translateX(0); /* Exibe o primeiro slide */
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%); /* Move para o segundo slide */
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%); /* Move para o terceiro slide */
+}
+
+.navigation {
+    display: flex; /* Exibe os pontos de navegação em linha */
+    justify-content: center; /* Centraliza os pontos */
+    margin-top: 10px; /* Espaçamento acima dos pontos */
+}
+
+.dot {
+    width: 15px; /* Largura dos pontos */
+    height: 15px; /* Altura dos pontos */
+    background-color: #bbb; /* Cor de fundo padrão dos pontos */
+    border-radius: 50%; /* Torna os pontos circulares */
+    margin: 0 5px; /* Espaçamento entre os pontos */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+.dot:hover {
+    background-color: #888; /* Escurece o ponto ao passar o mouse */
+}
+
+.central-menu {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+nav ul li.discrete a {
+    color: rgba(255, 255, 255, 0.7); /* Cor mais suave */
+    font-weight: normal; /* Peso da fonte mais leve */
+    text-decoration: underline; /* Adiciona um sublinhado */
+}
+
+nav ul li.discrete a:hover {
+    color: #fff; /* Muda para a cor original ao passar o mouse */
+}
+
